@@ -51,7 +51,7 @@ module.exports = ({ strapi }) => {
    * @return {string}
    */
   const getEntityName = (contentType) => {
-    return `${getTypeName(contentType)}Entity`;
+    return `${getTypeName(contentType)}`;
   };
 
   /**
@@ -69,7 +69,7 @@ module.exports = ({ strapi }) => {
    * @return {string}
    */
   const getEntityResponseName = (contentType) => {
-    return `${getEntityName(contentType)}Response`;
+    return `${getEntityName(contentType)}`;
   };
 
   /**

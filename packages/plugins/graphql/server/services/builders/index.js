@@ -27,10 +27,10 @@ const utils = require('./utils');
 const buildersFactories = [
   enums,
   dynamicZone,
-  entity,
+  //entity,
   entityMeta,
   type,
-  response,
+  //response,
   responseCollection,
   relationResponseCollection,
   queries,

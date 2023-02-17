@@ -10,7 +10,7 @@ module.exports = () => ({
   toEntityResponse(value, info = {}) {
     const { args = {}, resourceUID } = info;
 
-    return { value, info: { args, resourceUID } };
+    return value;
   },
 
   /**

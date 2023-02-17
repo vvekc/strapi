@@ -1,6 +1,6 @@
 'use strict';
 
-const { isArray, isString, isUndefined, constant } = require('lodash/fp');
+const { isArray, isString, isUndefined, constant, prop} = require('lodash/fp');
 const { objectType } = require('nexus');
 
 const { contentTypes } = require('@strapi/utils');
@@ -270,6 +270,8 @@ module.exports = (context) => {
 
       const { attributes, modelType } = contentType;
 
+
+
       const attributesKey = Object.keys(attributes);
 
       const name = (modelType === 'component' ? getComponentName : getTypeName).call(
@@ -281,6 +283,10 @@ module.exports = (context) => {
         name,
 
         definition(t) {
+
+          t.id('id', { resolve: prop('id') });
+
+
           if (modelType === 'component' && isNotDisabled(contentType)('id')) {
             t.nonNull.id('id');
           }

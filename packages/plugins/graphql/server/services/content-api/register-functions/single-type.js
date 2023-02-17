@@ -24,18 +24,18 @@ const registerSingleType = (contentType, { registry, strapi, builders }) => {
   registry.register(types.base, builders.buildTypeDefinition(contentType), getConfig(KINDS.type));
 
   // Higher level entity definition
-  registry.register(
+  /*registry.register(
     types.entity,
     builders.buildEntityDefinition(contentType),
     getConfig(KINDS.entity)
-  );
+  );*/
 
   // Responses definition
-  registry.register(
+  /*registry.register(
     types.response,
     builders.buildResponseDefinition(contentType),
     getConfig(KINDS.entityResponse)
-  );
+  );*/
 
   // Response collection definition
   registry.register(
